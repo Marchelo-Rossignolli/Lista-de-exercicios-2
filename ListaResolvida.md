@@ -253,6 +253,7 @@ ______
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
 
+***Resolução:***
 ```
 let idade = prompt(adicione sua idade)
 
@@ -282,6 +283,7 @@ Classe FormaGeometrica:
         # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
 
 ```
+***Resolução:***
 ```
 Class Circulo herda FormaGeometrica:
     Atributos:
@@ -304,6 +306,7 @@ Considere a fórumla de atualização velocidade:
 ```
     velocidade = velocidadeInicial + aceleracao*tempo
 ```
+***Resolução:***
 
 ```
 (legenda: v0 = Velocidade Inicial / a = Aceleração / d = Distância / V = Velocidade Máxima / t = Tempo / tL = Tempo Limite / v = velocidade / dP = distância Percorrida)
@@ -325,15 +328,15 @@ SimulaçãoDeCorrida
         Parar contagem de t (Pausa o cronômetro)
         }
 
-        Se (dP >= d) {
+        Se (dP >= d) { (Verifica quanto se deslocou)
         console.log(t)
         }
 
-        Se (t >= tL) {
+        Se (t >= tL) { (Verifica se quebrou o tempo)
         console.log("Tempo limite excedito)
         }
 
-        t -> t + 1
+        t -> t + 1 (Adicionar tempo)
 
     (Se o loop terminar sem voltar, significa que a simulação falhou)
     console.log("Falha no teste")
@@ -367,24 +370,27 @@ matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
 ```
+***Resolução:***
 ```
 Função MultiplicacaoDeMatrizes(matrizA, matrizB):
-    # Verifica se o número de colunas de A é igual ao número de linhas de B
-    Se tamanho(matrizA[0]) ≠ tamanho(matrizB) então:
+    (Verifica se o número de colunas de A é igual ao número de linhas de B)
+    if (tamanho(matrizA[0]) ≠ tamanho(matrizB)) {
         Retornar "As matrizes não podem ser multiplicadas. O número de colunas de A não é igual ao número de linhas de B."
-    Senão:
+    }
+    Else{
         linhasA <- tamanho(matrizA)
         colunasA <- tamanho(matrizA[0])
         colunasB <- tamanho(matrizB[0])
         matrizResultado <- novaMatriz(linhasA, colunasB)
 
-        # Loop para percorrer cada elemento da matriz resultado
-        Para i de 0 até linhasA-1 faça:
+        (Loop para percorrer cada elemento da matriz resultado
+        Para i de 0 até linhasA-1) faça:
             Para j de 0 até colunasB-1 faça:
                 soma <- 0
                 Para k de 0 até colunasA-1 faça:
                     soma <- soma + matrizA[i][k] * matrizB[k][j]
                 matrizResultado[i][j] <- soma
+    }
 
-        Retornar matrizResultado
+        console.log(matrizResultado)
 ```
