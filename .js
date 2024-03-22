@@ -16,3 +16,5 @@ for (var i = 0; i < valorCompras.length; i++) {
         console.log("Compra " + (i+1) + " negada. Saldo insuficiente e limite de crédito excedido.");
     }
 }
+
+//eu apagava e colocava cada código invés de criar arquivos distintos
